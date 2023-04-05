@@ -1,0 +1,48 @@
+<div class="col-sm-10 m-auto mt-2">
+    <div>
+        <div>
+            <h2 class="text-center">Update Agent</h2>
+        </div>
+        <div>
+            <form [formGroup]="editAgentForm" (ngSubmit)="updateAgent()">
+                <div class="form-floating mb-3">
+                    <input type="text" formControlName="agentname" class="form-control form-control-lg is-disabed" placeholder="Agent Name" readonly/>
+                    <label class="form-label " for="formControlLg">Enter Agent Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="number" id="formControlLg" formControlName="phno" class="form-control form-control-lg" placeholder="Mobile Nuber" readonly/>
+                    <label class="form-label " for="formControlLg">Enter Agent Mobile Number</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" formControlName="email" class="form-control form-control-lg" placeholder="Email-id"/>
+                    <label class="form-label " for="formControlLg">Enter Agent Email-id</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="date" formControlName="dob" class="form-control form-control-lg" placeholder="DOB"/>
+                    <label class="form-label " for="formControlLg">Enter Agent Date of Birth</label>
+                  </div>
+    
+                  <div class="mb-3">
+                  <mat-radio-group aria-label="Select an option" formControlName="gender">
+                    <mat-label><b> Gender</b></mat-label> &nbsp;
+                    <mat-radio-button value="male">Male</mat-radio-button>&nbsp;
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                  <div class="form-floating mb-3" >
+                    <input type="text" formControlName="adharno" class="form-control form-control-lg" placeholder="Adhar Number"/>
+                    <label class="form-label " for="formControlLg">Enter Agent Aadhar Number</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" formControlName="address" class="form-control form-control-lg" placeholder="address"/>
+                    <label class="form-label " for="formControlLg">Enter Agent Address</label>
+                  </div>
+                  <div class="text-center">
+                    <button mat-stroked-button color="accent" mat-dialog-close>Close</button> &nbsp;
+                    <button mat-raised-button color="primary" type="submit">update</button>
+                  </div>
+            </form>
+        </div>
+    
+    </div>
+    </div>

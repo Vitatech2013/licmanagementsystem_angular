@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-bordered mt-4" >
+            <thead style="background-color: #BB8FCE;">
+                <tr>
+                <th>S.No</th>
+                <th>Policy Name</th>
+                <th>minimum age</th>
+                <th>minimum amount</th>
+                <th>description</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of Policies index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{a.policyname}}</td>
+                    <td>{{a.minage}}</td>
+                    <td>{{a.minamount}}</td>
+                    <td>{{a.description}}</td>
+                    <td>
+                        <button mat-mini-fab color="primary" (click)="editPolicy(a)"><mat-icon>edit</mat-icon> </button>&nbsp;
+                        <button mat-mini-fab color="warn" (click)="deletePolicy(a._id)"><mat-icon>delete</mat-icon> </button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

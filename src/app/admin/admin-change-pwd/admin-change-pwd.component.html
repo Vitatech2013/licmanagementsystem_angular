@@ -1,0 +1,30 @@
+<div class="col-sm-10 m-auto mt-2">
+    <div>
+        <div>
+            <h2 class="text-center">Change Password</h2>
+        </div>
+        <div>
+            <form [formGroup]="adminChangepwdForm" (ngSubmit)="updatePWD()">
+                <div class="form-floating mb-3">
+                    <input type="text" formControlName="username" class="form-control form-control-lg is-disabed" placeholder="Agent Name" readonly/>
+                    <label class="form-label " for="formControlLg">username</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" formControlName="opwd" class="form-control form-control-lg" placeholder="Email-id"/>
+                    <label class="form-label " for="formControlLg">Enter old password</label>
+                  </div>
+    
+                
+                  <div class="form-floating mb-3" >
+                    <input type="text" formControlName="npwd" class="form-control form-control-lg" placeholder="Adhar Number"/>
+                    <label class="form-label " for="formControlLg">Enter new password</label>
+                  </div>
+                  <div class="text-center">
+                    <button mat-stroked-button color="accent" mat-dialog-close>Close</button> &nbsp;
+                    <button mat-raised-button color="primary" type="submit">Submit</button>
+                  </div>
+            </form>
+        </div>
+    
+    </div>
+    </div>

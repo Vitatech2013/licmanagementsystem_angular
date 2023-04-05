@@ -1,0 +1,96 @@
+<div class="col-sm-8 m-auto mt-4">
+    <div class="card mt-4">
+        <div class="card-header">
+            <h2 class="text-center">Add Customer</h2>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="editCustomerForm" (ngSubmit)="updateCustomer()">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <select class="form-select" formControlName="agentname">
+                                <option *ngFor="let a of agents" value="{{a.agentname}}">{{a.agentname}}</option>
+                            </select>
+                            <label class="form-label " for="formControlLg">Select Agent Name</label>
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <select class="form-select" formControlName="policyname">
+                                <option *ngFor="let p of policynames" value="{{p.policyname}}">{{p.policyname}}</option>
+                            </select>
+                            <label class="form-label " for="formControlLg">Select policy</label>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <input type="text" formControlName="customername" class="form-control form-control-lg" placeholder="Email-id"/>
+                            <label class="form-label " for="formControlLg">Enter Customer Name</label>
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <input type="text" formControlName="dob" class="form-control form-control-lg" placeholder="Email-id"/>
+                            <label class="form-label " for="formControlLg">Enter Customer Age</label>
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <input type="text" formControlName="phno" class="form-control form-control-lg" placeholder="Email-id"/>
+                            <label class="form-label " for="formControlLg">Enter customer Phone number</label>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <input type="text" formControlName="email" class="form-control form-control-lg" placeholder="Email-id"/>
+                            <label class="form-label " for="formControlLg">Enter customer Email-id</label>
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <input type="number" formControlName="policyamount" class="form-control form-control-lg" placeholder="Email-id"/>
+                            <label class="form-label " for="formControlLg">Enter Amount</label>
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <input type="number" formControlName="policyterm" class="form-control form-control-lg" placeholder="Email-id"/>
+                            <label class="form-label " for="formControlLg">Enter Policy Term</label>
+                          </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <input type="number" formControlName="policyperiod" class="form-control form-control-lg" placeholder="Email-id"/>
+                            <label class="form-label " for="formControlLg">Enter policy period</label>
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <input type="date" formControlName="joiningdate" class="form-control form-control-lg" placeholder="DOB"/>
+                            <label class="form-label " for="formControlLg">Enter Joining Date</label>
+                          </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-floating mb-3">
+                            <input type="text" formControlName="address" class="form-control form-control-lg" placeholder="Email-id"/>
+                            <label class="form-label " for="formControlLg">Enter Customer Address</label>
+                          </div>
+                    </div>
+
+                </div>
+                  <div class="text-center mt-2">
+                    <button mat-stroked-button color="accent" type="reset" mat-dialog-close>Close</button> &nbsp;
+                    <button mat-raised-button color="primary" type="submit">Update</button>
+                  </div>
+            </form>
+        </div>
+    
+    </div>
+    </div>

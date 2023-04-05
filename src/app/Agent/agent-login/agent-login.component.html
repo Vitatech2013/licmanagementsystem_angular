@@ -1,0 +1,26 @@
+<div class="col-sm-4 m-auto">
+<mat-card class="mt-4 mat-elevation-z8" style="background-color: #E5E8E8">
+    <mat-card-title class="text-center">Agent-Login</mat-card-title>
+<mat-card-content class="p-4">
+<form [formGroup]="agentLoginForm" (ngSubmit)="agentLogin()">
+<div class="row">
+    <mat-form-field appearance="outline">
+      <input type="text" matInput formControlName="agentname">
+      <mat-label>Enter Your Name</mat-label>
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline">
+      <input type="password" matInput formControlName="phno">
+      <mat-label>Enter mobile/phone number</mat-label>
+    </mat-form-field>
+ 
+  </div>
+
+  <div class="text-center">
+    <button type="submit"  mat-raised-button color="primary">Login</button>
+  </div>
+
+</form>
+</mat-card-content>
+</mat-card>
+</div>

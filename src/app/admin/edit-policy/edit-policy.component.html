@@ -1,0 +1,34 @@
+
+<div class="col-sm-10 m-auto">
+    <div class=" mt-4">
+        <div >
+            <h2 class="text-center">Edit Policy</h2>
+        </div>
+        <div >
+            <form [formGroup]="editPolicyForm" (ngSubmit)="updatePolicy()">
+                <div class="form-floating mb-3">
+                    <input type="text" formControlName="policyname" class="form-control form-control-lg" placeholder="Policy Name"/>
+                    <label class="form-label " for="formControlLg">Enter Policy Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="number" id="formControlLg" formControlName="minage" class="form-control form-control-lg" placeholder="Minimum Amount"/>
+                    <label class="form-label " for="formControlLg">Enter Minimum Age</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" formControlName="minamount" class="form-control form-control-lg" placeholder="Minimum Amount"/>
+                    <label class="form-label " for="formControlLg">Enter Minimum Age</label>
+                  </div>
+                
+                  <div class="form-floating mb-3">
+                    <input type="text" formControlName="description" class="form-control form-control-lg" placeholder="description"/>
+                    <label class="form-label " for="formControlLg">Description</label>
+                  </div>
+                  <div class="text-center">
+                    <button mat-stroked-button color="accent" type="reset">Reset</button> &nbsp;
+                    <button mat-raised-button color="primary" type="submit">Update</button>
+                  </div>
+            </form>
+        </div>
+    
+    </div>
+    </div>

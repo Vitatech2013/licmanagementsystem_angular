@@ -1,0 +1,26 @@
+<div class="container">
+    <h2 class="text-center mt-2">Policy List</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered mt-4" >
+            <thead style="background-color: #BB8FCE;">
+                <tr>
+                <th>S.No</th>
+                <th>Customer Name</th>
+                <th>Agent Name</th>
+                <th>Policy name</th>
+                <th>Policy Amount</th>
+                <th>New Amount</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of payments index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{p.customername}}</td>
+                    <td>{{p.agentname}}</td>
+                    <td>{{p.policyname}}</td>
+                    <td>{{p.policyamount}}</td>
+                    <td>{{p.newamount}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

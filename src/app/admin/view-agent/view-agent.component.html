@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-bordered mt-4" >
+            <thead style="background-color: #BB8FCE;">
+                <tr>
+                <th>S.No</th>
+                <th>Agent Name</th>
+                <th>Contact</th>
+                <th>Email-id</th>
+                <th>Dob</th>
+                <th>Gender</th>
+                <th>Adhar Number</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let a of agents index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{a.agentname}}</td>
+                    <td>{{a.phno}}</td>
+                    <td>{{a.email}}</td>
+                    <td>{{a.dob}}</td>
+                    <td>{{a.gender}}</td>
+                    <td>{{a.adharno}}</td>
+                    <td>{{a.address}}</td>
+                    <td>
+                        <button mat-mini-fab color="primary" (click)="editAgent(a)"><mat-icon>edit</mat-icon> </button>&nbsp;
+                        <button mat-mini-fab color="warn" (click)="deleteAgent(a._id)"><mat-icon>delete</mat-icon> </button>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

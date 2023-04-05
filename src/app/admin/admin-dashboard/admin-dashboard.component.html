@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">LIC-Management</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="add-agent" routerLinkActive="active">Add-Agent</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="add-policy" routerLinkActive="active">Add-Policy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="view-agents" routerLinkActive="active">View-Agent</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="view-policy" routerLinkActive="active">View-Policy</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" style="cursor: pointer;" (click)="changepwd()">Change-Password</a>
+          </li>
+         
+        </ul> 
+      </div>
+      <div class="text-end">
+        <button mat-raised-button color="warn" (click)="adminLogout()">logout</button>
+    </div>
+    </div>
+  </nav>
+  <div>
+    <router-outlet></router-outlet>
+  </div>

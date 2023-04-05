@@ -1,0 +1,40 @@
+<div class="container">
+    <h2 class="text-center mt-2">Customers</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered mt-4 text-center">
+            <thead style="background-color: #BB8FCE;">
+                <tr>
+                <th>S.No</th>
+                <th>Agent Name</th>
+                <th>Policy Name</th>
+                <th>Customer Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Policy Amount</th>
+                <th>Policy Term</th>
+                <th>Policy Period</th>
+                <th>Joining Date</th>
+                <th>Address</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of customers index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{c.agentname}}</td>
+                    <td>{{c.policyname}}</td>
+                    <td>{{c.customername}}</td>
+                    <td>{{c.dob}}</td>
+                    <td>{{c.email}}</td>
+                    <td>{{c.policyamount}}</td>
+                    <td>{{c.policyterm}}</td>
+                    <td>{{c.policyperiod}}</td>
+                    <td>{{c.joiningdate}}</td>
+                    <td>{{c.address}}</td>
+                    <td>
+                        <button class="btn btn-primary" (click)="editCustomer(c)">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

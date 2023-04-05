@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">LIC-Management</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="agent-view-policy" routerLinkActive="active">View-policy</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="add-customer" routerLinkActive="active">Add-Customer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="view-customer" routerLinkActive="active">View-Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="payment" routerLinkActive="active">Payment</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" routerLink="payment-details" routerLinkActive="active">Payment-Details</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" routerLink="agent-view-profile" routerLinkActive="active">view-profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="cursor: pointer;" (click)="changepwd()">Change-mobile-number</a>
+          </li>
+         
+        </ul> 
+      </div>
+      <div class="text-end">
+        <button mat-raised-button color="warn" (click)="agentLogout()">logout</button>
+    </div>
+    </div>
+  </nav>
+  <div>
+    <router-outlet></router-outlet>
+  </div>

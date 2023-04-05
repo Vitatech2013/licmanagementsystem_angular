@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="col-sm-5 m-auto mt-4">
+    <div class="card ">
+        <div class="card-header">
+            <h2>Payment</h2>
+        </div>
+        <div class="card-body p-4">
+            <form [formGroup]="paymentForm">
+                <div class="form-group mb-2">
+                    <label>Choose Customer</label>
+                    <select class="form-select" (change)="isSelected($event)" formControlName="customername" >
+                        <option *ngFor="let c of customers" value="{{c.customername}}">{{c.customername}}</option>
+                    </select>
+                  </div>
+                  <div class="form-group mb-2">
+                    <label>Agent Name</label>
+                    <input type="text" formControlName="agentname" class="form-control" [attr.disabled]="true">
+                  </div>
+                  <div class="form-group mb-2">
+                    <label>Policy Name</label>
+                    <input type="text" class="form-control" formControlName="policyname" [attr.disabled]="true">
+                  </div>
+                  <div class="form-group mb-2">
+                    <label>Agent Amount</label>
+                    <input type="text" class="form-control" formControlName="policyamount" [attr.disabled]="true">
+                  </div>
+                  <div class="form-group mb-2">
+                    <label>New Amount</label>
+                    <input type="text" class="form-control" formControlName="newamount">
+                  </div>
+                  <div class="form-group mb-2">
+                    <label>Joining Date</label>
+                    <input type="text" class="form-control" formControlName="joiningdate" [attr.disabled]="true">
+                  </div>
+                  <div class="text-center mt-4">
+                    <button mat-raised-button>Reset</button> &nbsp;
+                    <button mat-raised-button color="accent">Pay</button>
+                  </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
